@@ -1,65 +1,161 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <header id="page-header">
+        <div className="contenu-en-tete">
+          <h1>
+            Thomas <span>Calujek</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+          <h2>Étudiant en Informatique & Développeur Web</h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      </header>
+
+      <div id="conteneur-principal">
+        <aside id="col-gauche">
+          <div className="cadre-profil">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/photocv.jpg"
+              alt="Photo de Thomas Calujek"
+              width={180}
+              height={180}
+              className="photo-profil"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          </div>
+
+          <div className="contenu-apropos">
+            <h2>À propos</h2>
+            <p>
+              Évoluer dans la résonance des idées, avec écoute et envie
+              d’apprendre.
+            </p>
+          </div>
+
+          <div className="contenu-contact">
+            <h2>Contact</h2>
+            <p className="violet">Email:</p>
+            <p>
+              <a href="mailto:Thomas.calujek@gmail.com">
+                Thomas.calujek@gmail.com
+              </a>
+            </p>
+            <p className="violet">Téléphone:</p>
+            <p>+33 6 25 61 11 37</p>
+            <p className="violet">Adresse:</p>
+            <p>62580 Vimy, France</p>
+          </div>
+        </aside>
+
+        <main id="conteneur-contenu">
+          <section className="bloc">
+            <h2>Formations</h2>
+            <div className="entree">
+              <h3>BUT Informatique 3ème année (2023-En cours)</h3>
+              <p>Institut Universitaire de Technologie (Lens)</p>
+            </div>
+            <div className="entree">
+              <h3>Cycle préparatoire HEI (2022-2023)</h3>
+              <p>Université Catholique de Lille (Junia)</p>
+            </div>
+            <div className="entree">
+              <h3>Baccalauréat STI2D - Mention Bien (2019-2022)</h3>
+              <p>Institution Gustave Eiffel (Armentières)</p>
+              <p>Spécialité : Système de l'Information et du Numérique.</p>
+            </div>
+          </section>
+
+          <div className="ligne-h"></div>
+
+          <section className="bloc">
+            <h2>Expériences</h2>
+            <div className="entree">
+              <h3>Stage - Développeur Web (Été 2025)</h3>
+              <p>IEMN (Villeneuve d’Ascq)</p>
+              <p>
+                Stage en développement web au sein du laboratoire de l'Institut
+                d'Electronique, de Microélectronique et de Nanotechnologie.
+              </p>
+            </div>
+            <div className="entree">
+              <h3>Job d’été - Employé qualifié (2023 & 2024)</h3>
+              <p>Auchan (Hypermarché Englos)</p>
+            </div>
+          </section>
+
+          <div className="ligne-h"></div>
+
+          <section className="bloc">
+            <h2>Projets Personnels</h2>
+            <div className="entree">
+              <h3>Conception d'IA avec apprentissage et automatisation</h3>
+              <p>
+                IA entraînée pour l'identification de personnages en jeu et
+                automatisation des actions.
+              </p>
+            </div>
+            <div className="entree">
+              <h3>Site web pour la pêche</h3>
+              <p>
+                Développement d’un site d’indice de pêchabilité basé sur une API
+                météo.
+              </p>
+            </div>
+            <div className="entree">
+              <h3>Cybersécurité et Bug Bounty</h3>
+              <p>
+                Auto-formation sur TryHackMe et participation à un programme de
+                bug bounty sur HackerOne.
+              </p>
+            </div>
+          </section>
+
+          <div className="ligne-h"></div>
+
+          <div className="grille-blocs">
+            <section className="bloc">
+              <h2>Compétences</h2>
+              <ul>
+                <li>Git</li>
+                <li>Java/JavaFX</li>
+                <li>Python / Flask</li>
+                <li>PHP / Laravel</li>
+                <li>PostgreSQL</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </section>
+
+            <section className="bloc">
+              <h2>Atouts</h2>
+              <ul>
+                <li>Autonome</li>
+                <li>Rigoureux</li>
+                <li>Patient</li>
+                <li>Permis B</li>
+              </ul>
+            </section>
+
+            <section className="bloc">
+              <h2>Langues</h2>
+              <ul>
+                <li>Anglais (B2)</li>
+                <li>Espagnol (notions)</li>
+              </ul>
+            </section>
+
+            <section className="bloc">
+              <h2>Intérêts</h2>
+              <ul>
+                <li>Informatique</li>
+                <li>Pêche</li>
+                <li>Bowling</li>
+              </ul>
+            </section>
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
